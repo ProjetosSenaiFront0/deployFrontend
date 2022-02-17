@@ -35,7 +35,7 @@ export const Equipamentos = () => {
 
       axios({
         method: "post",
-        url: "http://localhost:5000/api/Equipamentos",
+        url: "http://betoapi.azurewebsites.net/api/Equipamentos",
         data: formData,
         headers: { "Content-Type": "multipart/form-data" },
       })
@@ -50,7 +50,7 @@ export const Equipamentos = () => {
     }
 
     const Listar = () => {
-      axios.get('http://localhost:5000/api/Equipamentos')
+      axios.get('http://betoapi.azurewebsites.net/api/Equipamentos')
       .then(resposta => {
         setProdutos(resposta.data);
       })
@@ -58,7 +58,7 @@ export const Equipamentos = () => {
     }
 
     const Remover = (id) => {
-      axios.delete('http://localhost:5000/api/Equipamentos/'+id)
+      axios.delete('http://betoapi.azurewebsites.net/api/Equipamentos/'+id)
       .then(() => {
         Listar();
       })
@@ -143,7 +143,7 @@ export const Equipamentos = () => {
 
             {produtos.map(item => 
               <div className="card" key={item.id}>
-                <img src={"http://localhost:5000/StaticFiles/Images/"+item.imagem} alt="" />
+                <img src={"http://betoapi.azurewebsites.net/StaticFiles/Images/"+item.imagem} alt="" />
                 <div>
                   <h4>{item.nomePatrimonio}</h4>
                   <span>Patrimônio: {item.descricao}</span>
