@@ -53,4 +53,4 @@ jobs:
           app-name: 'IPTablesFrontend'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A381A6C7A44A45DB9A7727E0678F89D6 }}
-          package: .
+          package: 'build'
